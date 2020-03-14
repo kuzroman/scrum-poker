@@ -1,0 +1,85 @@
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    background-color: black;
+    color: #0F0;
+    font-family: 'Consolas', monospace;
+}
+input {
+    outline: none;
+    background: #444;
+    color: #0F0;
+    padding: 8px;
+    display: block;
+    font-size: 1.5em;
+    border: none;
+    margin: 8px;
+}
+.online {
+    margin: 8px;
+}
+.rename {
+    margin: 8px;
+    text-align: right;
+}
+.clean {
+    padding: 8px;
+    display: inline-block;
+}
+.save {
+    border: 1px solid white;
+    display: inline-block;
+    font-size: 1.5em;
+    padding: 1rem 2rem;
+}
+.user-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+
+    .user {
+        margin: 4px;
+        font-size: 21px;
+        text-align: center;
+        display: inline-block;
+
+        &__me {
+            background: #444;
+        }
+
+        &__name{
+            padding: 8px;
+            text-align: center;
+            border: 1px solid white;
+        }
+
+        &__score {
+            height: 50px;
+            line-height: 50px;
+            font-size: 26px;
+            padding: 0 8px;
+            text-align: center;
+            border: 1px solid white;
+        }
+    }
+}
+.scores {
+    text-align: center;
+    font-size: 26px;
+
+    .score {
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        border: 1px solid white;
+        display: inline-block;
+        margin: 4px;
+
+        &__voted {
+            background: #444;
+        }
+    }
+}
