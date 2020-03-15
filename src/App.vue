@@ -136,9 +136,7 @@ export default {
     created() {
 
         ws.onmessage = response => {
-            let data = JSON.parse(response.data);
-            console.log('onmessage', data);
-            this.users = data;
+            this.users = JSON.parse(response.data);
         };
 
         ws.onopen = () => {
