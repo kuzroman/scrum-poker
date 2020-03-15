@@ -5,6 +5,7 @@ Work on Node.js with WebSocket
 Get start:
 ```
 npm i
+node server
 npm run serve
 ```
 
