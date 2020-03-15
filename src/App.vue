@@ -47,7 +47,7 @@
 </template>
 
 <script>
-const ws = new WebSocket('ws://localhost:3000');
+const ws = new WebSocket(`ws://${IP}:3000`);
 const defaultClick = 10;
 let idTimeout;
 const SesName = 'SPName';
@@ -127,7 +127,7 @@ export default {
             }
             idTimeout = setTimeout(() => {
                 this.clickToAdminMode = defaultClick;
-            }, 2000)
+            }, 500)
         },
         isShowScore(name) {
             return this.isAllVoted || name === this.name;

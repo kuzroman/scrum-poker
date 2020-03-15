@@ -2,6 +2,8 @@ const merge = require('webpack-merge');
 const path = require('path');
 const baseConfig = require('./webpack.common');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
+const ip = require("ip");
 
 const mergeUnique = merge({
     customizeArray: merge.unique(
@@ -15,7 +17,7 @@ const devConfig = {
     mode: 'development',
     devtool: 'source-map',
     devServer: {
-        // host: process.env.HOST || '0.0.0.0',
+        host: '0.0.0.0',
         port: 9001,
         publicPath: '/'
     },
@@ -24,6 +26,9 @@ const devConfig = {
             template: path.resolve(__dirname, 'src/index.html'),
             chunks: ['main']
         }),
+        new webpack.DefinePlugin({
+            IP: JSON.stringify(ip.address()),
+        })
     ],
 };
 

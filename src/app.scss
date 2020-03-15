@@ -39,6 +39,7 @@ input {
     display: flex;
     flex-wrap: wrap;
     margin-top: 20px;
+    user-select: none;
 
     .user {
         margin: 4px;
@@ -69,6 +70,7 @@ input {
 .scores {
     text-align: center;
     font-size: 26px;
+    user-select: none;
 
     .score {
         width: 80px;
