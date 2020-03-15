@@ -48,7 +48,7 @@
 
 <script>
 const ws = new WebSocket('ws://localhost:3000');
-const defaultClick = 5;
+const defaultClick = 10;
 let idTimeout;
 const SesName = 'SPName';
 
