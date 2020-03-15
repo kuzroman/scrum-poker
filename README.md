@@ -15,6 +15,6 @@ Enjoy !
 
 By default nobody see scores, until everybody make a choose!
 
-![](scrum-poker-1.PNG)
+![](scrum-poker.PNG)
 
 
