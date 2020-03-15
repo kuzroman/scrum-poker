@@ -62,7 +62,7 @@ export default {
             score: 0,
             status: 'OFFLINE',
             users: [],
-            scores: [0.5, 1, 2, 3, 5, 8, 12, 21],
+            scores: [0.5, 1, 2, 3, 5, 8, 13, 21],
             adminMode: false,
             clickToAdminMode: defaultClick,
         }
