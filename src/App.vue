@@ -7,6 +7,7 @@
             <div class="online">{{status}}</div>
             <input class="inputName" v-model="name"
                    required
+                   autofocus
                    autocomplete="off"
                    placeholder="name"
                    maxlength="10"
