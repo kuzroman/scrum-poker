@@ -62,7 +62,7 @@ export default {
             score: 0,
             status: 'OFFLINE',
             users: [],
-            scores: [0.5, 1, 2, 3, 5, 8, 13, 21],
+            scores: [0.5, 1, 2, 3, 5, 8, 13, 21, '?'],
             adminMode: false,
             clickToAdminMode: defaultClick,
         }
@@ -90,7 +90,8 @@ export default {
             this.send({command: 'setScore'});
         },
         saveName(name) {
-            if (!this.name || this.findUserByName(this.name)) {
+            name = name.trim();
+            if (!name || this.findUserByName(name)) {
                 return;
             }
             this.name = name;

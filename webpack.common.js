@@ -1,6 +1,8 @@
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const webpack = require('webpack');
+const ip = require("ip");
 
 module.exports = {
     entry: './src/main.js',
@@ -10,15 +12,6 @@ module.exports = {
     },
     module: {
         rules: [
-            {
-                test: /\.twig$/,
-                use: {
-                    loader: 'twig-loader',
-                    options: {
-                        // See options section below
-                    },
-                }
-            },
             {
                 test: /\.vue$/,
                 loader: 'vue-loader'
@@ -30,7 +23,6 @@ module.exports = {
                         use: [
                             MiniCssExtractPlugin.loader,
                             { loader: 'css-loader' },
-                            // 'postcss-loader',
                             'sass-loader',
                         ]
                     }
@@ -64,19 +56,16 @@ module.exports = {
         contentBase: [
             path.resolve(__dirname, 'static'),
         ],
-        headers: {
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
-            "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization",
-            "Access-Control-Max-Age": 600
-        },
         watchOptions: {
             aggregateTimeout: 1000,
             ignored: /[\\/]node_modules[\\/]/
         }
     },
     plugins: [
-        new MiniCssExtractPlugin({ filename: '[name].[hash:8].css' }),
-        new VueLoaderPlugin()
+        new MiniCssExtractPlugin({ filename: '[name].css' }),
+        new VueLoaderPlugin(),
+        new webpack.DefinePlugin({
+            IP: JSON.stringify(ip.address()),
+        })
     ],
 };
