@@ -2,7 +2,7 @@
 
 Work on Node.js with WebSocket
 
-####Get start for local use:
+#### Get start for local use:
 ```
 npm i
 node server
@@ -11,7 +11,7 @@ npm run serve
 
 Check this out it http://localhost:9001/
 
-####For production build
+#### For production build
 ```
 npm i
 node server
