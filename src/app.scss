@@ -17,13 +17,22 @@ input {
     font-size: 1.5em;
     border: none;
     margin: 8px;
+    clear: both;
 }
 .online {
     margin: 8px;
+    float: left;
 }
 .rename {
     margin: 8px;
     text-align: right;
+    float: right;
+}
+.lobby {
+    text-align: center;
+    width: 100px;
+    margin: 0 auto;
+    padding-top: 8px;
 }
 .clean {
     padding: 8px;
@@ -71,6 +80,7 @@ input {
     text-align: center;
     font-size: 26px;
     user-select: none;
+    clear: both;
 
     .score {
         width: 80px;
@@ -84,4 +94,7 @@ input {
             background: #444;
         }
     }
+}
+.red {
+    color: red !important;
 }
