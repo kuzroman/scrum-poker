@@ -173,7 +173,7 @@ export default {
             return this.isAllVoted || name === this.name;
         },
         inputName() {
-            this.name = this.name.replace(/[^a-zA-Zа-я]+/g, '');
+            this.name = this.name.replace(/[^a-zA-Zа-яА-Я-]+/g, '');
         },
         inputLobby() {
             if (this.lobby.length > 4) {
