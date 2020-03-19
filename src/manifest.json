@@ -1,0 +1,14 @@
+{
+  "background_color": "black",
+  "description": "Scrum poker. Nodejs, webSocket, js, Vue.js",
+  "display": "fullscreen",
+  "name": "Scrum poker",
+  "short_name": "ScrumPoker",
+  "start_url": "/index.html",
+   "icons": [
+      {
+        "src": "/icon.svg",
+        "sizes": "192x192",
+      }
+    ]
+}
