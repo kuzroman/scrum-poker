@@ -57,7 +57,7 @@
                     <div class="user__name">{{formattedSession(user.name, 'name')}}</div>
                     <div class="user__score">
                         <span v-if="isShowScore(user.name)">{{user.score}}</span>
-                        <span v-else-if="user.score > 0">V</span>
+                        <span v-else-if="user.score !== 0">V</span>
                     </div>
                 </div>
             </div>
