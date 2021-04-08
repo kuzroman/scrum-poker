@@ -9,7 +9,7 @@ node server
 yarn run serve
 ```
 
-Check this out it http://localhost:9011/
+Check this out it http://localhost:9001/
 
 #### For production build
 ```
