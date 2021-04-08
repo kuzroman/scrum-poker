@@ -9,7 +9,8 @@ node server
 yarn run serve
 ```
 
-Check this out it http://localhost:9001/
+Check this out it http://localhost:9011/
+##### you can change port here ./config.js
 
 #### For production build
 ```

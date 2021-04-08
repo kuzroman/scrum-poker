@@ -1,3 +1,4 @@
+const {serverPort} = require( './config')
 const merge = require('webpack-merge');
 const path = require('path');
 const baseConfig = require('./webpack.common');
@@ -16,7 +17,7 @@ const devConfig = {
     devtool: 'source-map',
     devServer: {
         host: '0.0.0.0',
-        port: 9001,
+        port: serverPort,
         publicPath: '/'
     },
     plugins: [

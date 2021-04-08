@@ -1,5 +1,6 @@
 const WebSocket = require('ws');
-const server = new WebSocket.Server({port: 3000});
+const { webSocketPort } = require('./config.js');
+const server = new WebSocket.Server({port: webSocketPort});
 let users = [];
 
 server.on('connection', ws => {

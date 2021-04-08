@@ -67,7 +67,8 @@
 </template>
 
 <script>
-const ws = new WebSocket(`ws://${IP}:3000`);
+const { webSocketPort } = require('/config.js');
+const ws = new WebSocket(`ws://${IP}:${webSocketPort}`);
 const defaultClick = 10;
 let idTimeout;
 const SesName = 'SPName';
