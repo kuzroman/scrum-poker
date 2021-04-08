@@ -4,12 +4,12 @@ Work on Node.js with WebSocket
 
 #### Get start for local use:
 ```
-npm i
+yarn
 node server
-npm run serve
+yarn run serve
 ```
 
-Check this out it http://localhost:9001/
+Check this out it http://localhost:9011/
 
 #### For production build
 ```
@@ -21,7 +21,7 @@ Run index.html from /dist
 
 Enjoy!
 
-By default nobody see scores, until everybody make a choose!
+By default, nobody sees scores, until everybody makes choose!
 
 ![](scrum-poker.PNG)
 
